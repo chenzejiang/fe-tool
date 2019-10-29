@@ -9,7 +9,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "jquery": "2.1.1",
+    "jquery": "3.4.1",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
     "vue": "^2.1.0",
