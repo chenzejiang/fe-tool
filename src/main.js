@@ -7,6 +7,10 @@ import VueClipboard from 'vue-clipboard2';
 import routes from './Router';
 import App from './App';
 
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+import GL_Component from './utils/globalComponents';
+
 /* 引入bootstrap */
 import './assets/css/bootstrap.css';
 import './assets/js/bootstrap.js';
@@ -14,6 +18,8 @@ import './assets/js/bootstrap.js';
 Vue.use(VueAxios, axios);
 Vue.use(VueRouter);
 Vue.use(VueClipboard);
+Vue.use(ElementUI);
+Vue.use(GL_Component);
 
 import './utils/formatTime.js';
 

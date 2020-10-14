@@ -1,5 +1,5 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
-var path = require('path')
+var path = require('path');
 
 module.exports = {
   build: {
@@ -9,7 +9,7 @@ module.exports = {
     assetsSubDirectory: 'static',
     // assetsPublicPath: '/',
     assetsPublicPath: '',
-    productionSourceMap: false,  // 取消map文件的打包输出
+    productionSourceMap: false, // 取消map文件的打包输出
     // Gzip off by default as many popular static hosts such as
     // Surge or Netlify already gzip all static assets for you.
     // Before setting to `true`, make sure to:
@@ -31,4 +31,4 @@ module.exports = {
     // just be aware of this issue when enabling this option.
     cssSourceMap: false
   }
-}
+};

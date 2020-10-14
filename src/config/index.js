@@ -55,11 +55,6 @@ export const ROUTER_CONFIG = [
     text: '颜色选取'
   },
   {
-    path: '/tool/tinypng',
-    icon: 'icon-folder-images',
-    text: '图片压缩'
-  },
-  {
     path: '/tool/css_format',
     icon: 'icon-flow-tree',
     text: 'CSS压缩格式化'

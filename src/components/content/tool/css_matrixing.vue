@@ -101,14 +101,14 @@ export default {
   methods: {
     // 所有浏览器
     css_matrixing: function() {
-      var agoVal = $('#textarea_01').val(),
-        r_checkbox = $('#column_checkbox').prop('checked'),
-        r_checkbox2 = $('#column_checkbox2').prop('checked'),
-        r_checkbox3 = $('#column_checkbox3').prop('checked'),
-        r_checkbox4 = $('#column_checkbox4').prop('checked'),
-        r_checkbox5 = $('#column_checkbox5').prop('checked'),
-        numVal,
-        unitRadioVal = Number($('.column_num input[name=column_num]:checked').val());
+      var agoVal = $('#textarea_01').val();
+      var r_checkbox = $('#column_checkbox').prop('checked');
+      var r_checkbox2 = $('#column_checkbox2').prop('checked');
+      var r_checkbox3 = $('#column_checkbox3').prop('checked');
+      var r_checkbox4 = $('#column_checkbox4').prop('checked');
+      var r_checkbox5 = $('#column_checkbox5').prop('checked');
+      var numVal;
+      var unitRadioVal = Number($('.column_num input[name=column_num]:checked').val());
       if (unitRadioVal === 0) {
         numVal = 1.5;
       } else if (unitRadioVal === 1) {
@@ -136,14 +136,14 @@ export default {
       }
       if (r_checkbox5) {
         var rb5_val = $('#column_checkbox5_val').val();
-        if ($.trim(rb5_val.replace(/:/g, '')) != '') {
+        if ($.trim(rb5_val.replace(/:/g, '')) !== '') {
           console.log('不为空');
           var rb5_array, rb5_length;
           rb5_array = rb5_val.split(':');
           rb5_length = rb5_array.length;
           for (var i = 0; i < rb5_length; i++) {
             var rb5_arrayVal = $.trim(rb5_array[i]);
-            if (rb5_arrayVal != '') {
+            if (rb5_arrayVal !== '') {
               var rb5_regexp = new RegExp(
                 '\\s*' + rb5_arrayVal + '\\s*:[^;]*;'
               );
@@ -170,13 +170,13 @@ export default {
           }
         });
       }
-      if (numVal != '' && numVal != 0 && numVal > 1) {
+      if (numVal !== '' && numVal !== 0 && numVal > 1) {
         agoVal = agoVal.replace(/\d+px/gi, function(r_word1) {
-          var a_nun = parseInt(r_word1) * numVal,
-            a_divide = parseInt(a_nun / 2),
-            a_surplus = a_nun % 2;
-          if (a_surplus != 0) {
-            if (a_divide != 0) {
+          var a_nun = parseInt(r_word1) * numVal;
+          var a_divide = parseInt(a_nun / 2);
+          var a_surplus = a_nun % 2;
+          if (a_surplus !== 0) {
+            if (a_divide !== 0) {
               if (a_surplus > 1) {
                 return (a_divide * 1 + 1) * 2 + 'px';
               } else {

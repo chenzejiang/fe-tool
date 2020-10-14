@@ -9,15 +9,13 @@ import html_reset from './components/content/tool/html_reset';
 /* CSS换算 */
 import css_matrixing from './components/content/tool/css_matrixing';
 /* 二维码生成 */
-import qr_code from './components/content/tool/qr_code';
+import qr_code from './components/content/tool/qrCode/qr_code';
 /* 生成缩略图 */
 import creat_img from './components/content/tool/creat_img';
 /* animate.css */
 import animate from './components/content/tool/animate';
 /* 颜色选取 */
 import colpick from './components/content/tool/colpick';
-/* 图片压缩 */
-import tinypng from './components/content/tool/tinypng';
 /* css压缩格式化 */
 import css_format from './components/content/tool/css_format';
 /* json压缩格式化 */
@@ -95,7 +93,7 @@ const routes = [
     component: qr_code,
     meta: {
       icon: 'icon-eye',
-      title: '二维码生成'
+      title: '二维码生成与解码'
     }
   },
   {
@@ -120,14 +118,6 @@ const routes = [
     meta: {
       icon: 'icon-brush',
       title: '颜色选取'
-    }
-  },
-  {
-    path: '/tool/tinypng',
-    component: tinypng,
-    meta: {
-      icon: 'icon-folder-images',
-      title: '图片压缩'
     }
   },
   {
