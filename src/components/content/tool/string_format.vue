@@ -1,17 +1,34 @@
 <template>
   <div class="tool_box">
     <h1>{{ this.$route.meta.title }}</h1>
-    <div class="form-group">
-      <label for="exampleInputPassword1">即将转换的内容</label>
-      <input
-        v-model="textFormat"
-        type="text"
-        class="form-control"
-        placeholder="请输入.."
-      >
+    <div class="stringFormat">
+      <!-- <label for="exampleInputPassword1">即将转换的内容</label> -->
+      <!-- <el-alert
+        title="即将转换的内容"
+        type="error"
+        :closable="false"
+      > -->
+      <p class="p1">即将转换的内容</p>
+      <el-input v-model="textFormat" placeholder="请输入.."></el-input>
     </div>
 
-    <div v-for="(item) in formarArr" :key="item.title" class="form-inline">
+    <div class="inputBox">
+      <div v-for="(item) in formarArr" :key="item.title" class="form-inline">
+        <el-input placeholder="请输入内容" :value="item.val" class="input-with-select">
+          <template slot="prepend">{{ item.title }}</template>
+          <el-button
+            v-clipboard:copy="item.val"
+            v-clipboard:success="onCopySuccess"
+            slot="append"
+            type="primary"
+          >
+            Copy
+          </el-button>
+        </el-input>
+      </div>
+    </div>
+
+    <!-- <div v-for="(item) in formarArr" :key="item.title" class="form-inline">
       <div class="form-group">
         <div class="input-group">
           <div class="input-group-addon">{{ item.title }}</div>
@@ -23,7 +40,7 @@
           >Copy</div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -139,13 +156,24 @@ export default {
   font-size: 20px;
   padding: 20px;
   color: #000;
+  .stringFormat{
+    margin-bottom: 30px;
+  }
   .form-inline {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    max-width: 600px;
   }
   .btn-primary {
     color: #fff;
     background-color: #337ab7;
     border-color: #2e6da4;
+  }
+  .p1{
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 30px;
+    color: #409EFF;
+    margin-bottom: 10px;
   }
 }
 </style>

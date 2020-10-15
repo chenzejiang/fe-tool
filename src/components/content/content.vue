@@ -104,7 +104,7 @@ export default {
     textarea {
       width: 100%;
       height: 220px;
-      font-size: 20px;
+      font-size: 16px;
       padding: 5px;
     }
   }

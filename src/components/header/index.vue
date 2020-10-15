@@ -3,9 +3,9 @@
     <h1>
       <router-link to="/">Web前端工具箱</router-link>
     </h1>
-    <div class="userBox">
-      <img src="static/images/user-pic/user-id-1.png" class="userLogo" alt="userName" />
-      <span class="userName">webJ</span>
+    <div class="userBox" @click="onGithub">
+      <img src="static/images/github.png" class="userLogo" alt="userName" />
+      <span class="userName">github</span>
     </div>
   </header>
 </template>
@@ -14,6 +14,11 @@
 export default {
   data() {
     return {};
+  },
+  methods: {
+    onGithub() {
+      window.open('https://github.com/chenzejiang/fe-tool', '_blank');
+    }
   }
 };
 </script>
@@ -38,6 +43,7 @@ export default {
     }
   }
   .userBox {
+    cursor: pointer;
     float: right;
     background: #262626;
     height: 100%;

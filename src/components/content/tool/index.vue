@@ -7,17 +7,9 @@
       </h2>
       <ul class="boxlist clearfix">
         <li :key="item.data_content" v-for="item in items">
-          <a
-            :href="item.link"
-            target="_blank"
-            data-toggle="popover"
-            data-trigger="hover"
-            data-container="body"
-            data-placement="top"
-            data-html="true"
-            :data-content="item.data_content"
-            :data-original-title="item.data_original_title"
-          >{{ item.link_txt }}</a>
+          <el-tooltip class="item" effect="dark" :content="item.data_content" :open-delay="100" placement="top">
+            <a :href="item.link" target="_blank">{{ item.link_txt }}</a>
+          </el-tooltip>
         </li>
       </ul>
     </section>
@@ -88,11 +80,8 @@ export default {
       index_data: index_data
     };
   },
-  mounted() {
-    $("[data-toggle='popover']").popover();
-  },
-  methods: {
-  }
+  mounted() {},
+  methods: {}
 };
 </script>
 

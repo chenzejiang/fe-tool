@@ -117,7 +117,7 @@ const routes = [
     component: colpick,
     meta: {
       icon: 'icon-brush',
-      title: '颜色选取'
+      title: '颜色选取与转换'
     }
   },
   {

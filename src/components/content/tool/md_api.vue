@@ -7,15 +7,12 @@
       <br />1、Chrome插件 Allow-Control-Allow-Origin
       <br />2、Chrome 命令行启动参数 --disable-web-security
     </p>
-    <h5>模板(可编辑)</h5>
-    <pre contenteditable="true">
-[
+    <textarea id="txt1">[
     {
         "title":"获取文章",
         "url":"http://test.carisok.com/pc.php/index/get_articles/?api_version=1.55&__trace_id=c8d6f77c-39a7-490c-87f2-fc0aa77e7420-store&token=45be8ba612e77dc33ae6099cdb41dacd"
     }
-]</pre>
-    <textarea id="txt1"></textarea>
+]</textarea>
     <div class="btn_box">
       <v-btn btnText="转换" @click.native="transformFun"></v-btn>
     </div>
@@ -35,6 +32,7 @@
   .red {
     font-size: 14px;
     color: #f22;
+    margin-bottom: 30px;
   }
   h5 {
     font-size: 16px;
@@ -74,7 +72,6 @@ export default {
 
     getHttpData(loadArr) {
       const reqList = [];
-      const resList = [];
       loadArr.forEach((item, index) => {
         const req = this.axios.get(item.url);
         reqList.push(req);
