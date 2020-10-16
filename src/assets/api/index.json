@@ -265,6 +265,12 @@
             "link_txt": "删除无用的CSS样式",
             "data_content": "UnCSS Online 删除无用的CSS样式",
             "data_original_title": "工具说明"
+        },
+        {
+            "link": "https://unbug.github.io/codelf/",
+            "link_txt": "CODEIF",
+            "data_content": "生成变量名，不用再去想变量名",
+            "data_original_title": "工具说明"
         }
     ],
     "代码展示": [
